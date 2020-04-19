@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Raindrop</title>
+    <link>/</link>
+    <description>Recent content on Raindrop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 19 Apr 2020 19:17:27 +0800</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>开始</title>
+      <link>/start/</link>
+      <pubDate>Sun, 19 Apr 2020 19:17:27 +0800</pubDate>
+      
+      <guid>/start/</guid>
+      <description>Hugo hugo是一个静态博客工具，采用我比较喜欢的golang编写
+# 官网 https://gohugo.io # 源码 https://github.com/gohugoio/hugo # 下载 https://github.com/gohugoio/hugo/releases 可以从github的release下载，如果有搭建golang编译环境的话，也可以自行编译。
+# 开启go module go env -w GO111MODULE=on # 编译并安装 go get -ldflags &amp;#34;-w -s&amp;#34; github.com/gohugoio/hugo # 注意添加GOPATH/bin到环境变量中，就可以使用hugo命令了 使用方法
+# 创建站点 hugo new site raindrop # 新建文章 hugo new posts/theme.md # 开启本地服务，执行成功后就可以使用浏览器访问 http://localhost:1313 hugo server Git git是一款版本控制软件，是目前最流行的代码管理软件，它可以追踪文件的改动，并方便的进行回退，所以我们这里用它来管理雨滴。
+# windows下载地址 https://git-scm.com/ 下载安装后，就可以通过如下命令来管理了。
+cd raindrop git init git add * git commit * -m&amp;#34;init raindrop&amp;#34; Theme hugo要下载一个主题才能使用，官网上提供了大量主题可供选择，我这里选择的是一款名叫Terminal的主题，其设计是模仿终端命令行，界面简洁美观，是我喜欢的风格。
+# 主题列表 https://themes.gohugo.io/ # Terminal https://themes.</description>
+    </item>
+    
+    <item>
+      <title>关于</title>
+      <link>/about/</link>
+      <pubDate>Sun, 19 Apr 2020 19:02:31 +0800</pubDate>
+      
+      <guid>/about/</guid>
+      <description>雨滴 内心所求无处安放，很想创建一个记录文字的地方，所以有了这个地方。
+这个地方需要一个名字，想了好久，脑海里出现一个词，雨滴，raindrop，很好，越读越喜欢。
+主题 找到搭建个人博客的工具，hugo，看到满屏的主题，挑来挑去，无从选择，忽然看到了这个Terminal，眼前一亮，很是喜欢，于是其他的也不再去看。</description>
+    </item>
+    
+  </channel>
+</rss>
