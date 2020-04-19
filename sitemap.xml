@@ -23,7 +23,22 @@
   </url>
   
   <url>
+    <loc>/tags/%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2020-04-19T21:02:31+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/gitbook/</loc>
+    <lastmod>2020-04-19T21:02:31+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/</loc>
+    <lastmod>2020-04-19T21:02:31+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/devtools/</loc>
     <lastmod>2020-04-19T21:02:31+08:00</lastmod>
   </url>
   

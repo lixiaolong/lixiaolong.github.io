@@ -28,6 +28,31 @@ source ~/.zshrcnode --version安装 cnpm nodejs 使用 npm 来进行包管理�
     </item>
     
     <item>
+      <title>编译环境搭建</title>
+      <link>/posts/devtools/</link>
+      <pubDate>Sun, 19 Apr 2020 21:02:31 +0800</pubDate>
+      
+      <guid>/posts/devtools/</guid>
+      <description>Windows下搭建docker环境 安装docker-machine 1）docker-machine是用来创建boot2docker虚拟机的，下载地址
+https://github.com/docker/machine/releases
+2）将文件存放到PATH环境变量对应的目录中
+3）如有必要，给docker-machine加可执行权限
+使用docker-machine创建虚拟机 1）创建虚拟机的命令
+docker-machine create --virtualbox-disk-size &amp;#34;50000&amp;#34; --virtualbox-cpu-count &amp;#34;4&amp;#34; \  --virtualbox-memory &amp;#34;4096&amp;#34; -d virtualbox devtool 2）如果执行的非常慢，在下载boot2docker很久，可以先手动下载该ISO，放到cache目录下，再执行命令就会快很多，下面是windows下的路径
+C:\Users\username\.docker\machine\cache 3）手动下载boot2docker的地址，将下载好的ISO放入cache文件夹即可
+https://github.com/boot2docker/boot2docker/releases
+4）创建好虚拟机之后，就可以通过如下命令连接到虚拟机的ssh中
+docker-machine start devtool docker-machine ssh devtool 5）进入虚拟机之后，可以通过sudo -s切换到root，无需密码
+6）虚拟机中自带了docker命令，而且在/c/是和windows主机的c盘有映射的，可以直接共享文件
+使用docker-compose管理docker容器 docker-compose是一个docker的配置管理命令，可以通过一个配置文件，管理多个docker容器，还支持指定Dockerfile，几乎所有docker相关的命令都有对应的配置。
+1）下载docker-compose，将可执行文件放到boot2docker虚拟机中
+https://github.com/docker/compose/releases
+2）编写docker-compose.yaml配置文件
+Version0: &amp;#34;3&amp;#34; services: devtool: build: . volumes: - /c/Users/li_xi/work/build/:/build working_dir: /build stdin_open: true tty: true 3）编写Dockerfile
+FROMcentos:7RUN yum -y install kde-l10n-Chinese &amp;amp;&amp;amp; \  yum -y reinstall glibc-common &amp;amp;&amp;amp; \  localedef -c -f UTF-8 -i zh_CN zh_CN.</description>
+    </item>
+    
+    <item>
       <title>开始</title>
       <link>/start/</link>
       <pubDate>Sun, 19 Apr 2020 19:17:27 +0800</pubDate>
