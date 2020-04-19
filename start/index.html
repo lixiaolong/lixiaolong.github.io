@@ -263,8 +263,19 @@ git submodule add https://github.com/panr/hugo-theme-terminal.git themes/termina
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 官网</span>
 https://typora.io
 </code></pre></div><h2 id="github">Github<a href="#github" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p><code>github</code>是一个代码托管软件，我们可以把雨滴放到上面，这样离开了本地电脑也能访问，甚至<code>github pages</code>还可以提供免费的网站搭建，这里留一部分以后来补充。</p>
+<p><code>github</code>是一个代码托管软件，我们可以把雨滴放到上面，这样离开了本地电脑也能访问，甚至<code>github pages</code>还可以提供免费的网站搭建。</p>
+<p>首先要创建<code>github</code>账号，然后创建一个名为<code>raindrop</code>的空仓库，用来放我们的源码，再创建一个名为<code>lixiaolong.github.io</code>的空仓库，用来放最终的网站代码，其中<code>lixiaolong</code>是<code>github</code>的用户名。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 之前已经创建了本地的raindrop项目，并且已经提交过了，所以这里直接指向远程仓库</span>
+git remote add origin https://github.com/lixiaolong/raindrop.git
+git push -u origin master
 
+<span style="color:#75715e"># 添加子模块 lixiaolong.github.io</span>
+git submodule add https://github.com/lixiaolong/lixiaolong.github.io.git public
+</code></pre></div><p>之后，直接执行<code>hugo</code>即可生成页面到<code>public</code>中，再提交所有即可。</p>
+<p>最后将代码提交到远端，就可以浏览器访问了，注意主目录和<code>public</code>都要提交。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 浏览器访问</span>
+https://lixiaolong.github.io
+</code></pre></div>
       </div></div>
   
   <div class="pagination">
