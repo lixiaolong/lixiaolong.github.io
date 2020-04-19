@@ -6,9 +6,28 @@
     <description>Recent content in Tags on Raindrop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Sun, 19 Apr 2020 21:02:31 +0800</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>gitbook</title>
+      <link>/tags/gitbook/</link>
+      <pubDate>Sun, 19 Apr 2020 21:02:31 +0800</pubDate>
+      
+      <guid>/tags/gitbook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>好用工具</title>
+      <link>/tags/%E5%A5%BD%E7%94%A8%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Sun, 19 Apr 2020 21:02:31 +0800</pubDate>
+      
+      <guid>/tags/%E5%A5%BD%E7%94%A8%E5%B7%A5%E5%85%B7/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
