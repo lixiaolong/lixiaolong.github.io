@@ -9,11 +9,8 @@
 <meta name="description" content="概述 无聊的时候就会看看斗鱼直播，主要看看游戏区，奈何网页和官方客户端上各种眼花缭乱的功能，看着就心烦意乱，Win10 上确实有个官方 UWP 的客户端又简洁又美观，然而官方却放弃了这个客户端，目前这个 UWP 版本播放时不时就闪退，实在抓狂，所以只得到网上找找有没有解决办法，于是在网上搜集到了一个比较符合我的口味的解决办法，在这里记录下来。
 # 参考链接https://www.52pojie.cn/thread-1096152-1-1.html步骤 第一步是一个关键网址
 https://web.sinsyth.com/lxapi/douyujx.x?roomid=房间号如果房间当前没有直播，则会返回未开播的json
-{&amp;#34;type&amp;#34;:&amp;#34;strjson&amp;#34;,&amp;#34;Rendata&amp;#34;:{&amp;#34;tname&amp;#34;:&amp;#34;Unbroadcast&amp;#34;,&amp;#34;time&amp;#34;:1588657716},&amp;#34;info&amp;#34;:&amp;#34;Live broadcasting has been closed&amp;#34;,&amp;#34;state&amp;#34;:&amp;#34;NO&amp;#34;}如果房间正在直播，则会返回直播的地址
-{&amp;#34;type&amp;#34;:&amp;#34;strjson&amp;#34;,&amp;#34;Rendata&amp;#34;:{&amp;#34;media_type&amp;#34;:&amp;#34;live&amp;#34;,&amp;#34;data&amp;#34;:{&amp;#34;vid&amp;#34;:&amp;#34;208114&amp;#34;,&amp;#34;roomName&amp;#34;:&amp;#34;\u8bf7\u95ee\u8fd9\u91cc\u662f\u7089\u77f3\u533a\u58f0\u97f3\u6700\u5927\u7684\u76f4\u64ad\u95f4\u5417\uff1f&amp;#34;,&amp;#34;nickname&amp;#34;:&amp;#34;\u6069\u57fa\u7231\u840c\u840c\u54d2\u7684\u72d7\u8d3c&amp;#34;,&amp;#34;avatar&amp;#34;:&amp;#34;https:\/\/apic.douyucdn.cn\/upload\/avatar_v3\/201910\/54c8b6e4868041b1b1dc39776c110850_big.jpg?rltime&amp;#34;,&amp;#34;roomimg&amp;#34;:&amp;#34;https:\/\/rpic.douyucdn.cn\/asrpic\/200505\/208114_1317.png\/dy1&amp;#34;,&amp;#34;roominfo&amp;#34;:&amp;#34;\u4e0d\u7ba1\u4f60\u6765\u4e0d\u6765 \u6bcf\u5929\u6211\u90fd\u5728\u8fd9\u7b49\u4f60\u5440&amp;#34;},&amp;#34;link&amp;#34;:&amp;#34;http:\/\/hdl1a.douyucdn.cn\/live\/208114rCvmwAkEjM_2000p.flv?wsAuth=5804929fa6cee67e690d1c6ef9f15eb6&amp;amp;token=cpn-androidmpro-0-208114-35b27a1378d7a7e3e8294e9b8cf5f0cb171e097595355a4e&amp;amp;logo=0&amp;amp;expire=0&amp;amp;did=3b261266e884c0ed89a49f0cb582dc30&amp;amp;origin=all&amp;amp;vhost=play2&amp;#34;,&amp;#34;time&amp;#34;:1588656009},&amp;#34;info&amp;#34;:&amp;#34;Check-OK&amp;#34;,&amp;#34;state&amp;#34;:&amp;#34;SUCCESS&amp;#34;}上面的 json 中，link 字段就是直播的地址，这里要做个变换。
-http:\/\/hdl1a.douyucdn.cn\/live\/208114rCvmwAkEjM_2000p.flv?wsAuth=5804929fa6cee67e690d1c6ef9f15eb6&amp;amp;token=cpn-androidmpro-0-208114-35b27a1378d7a7e3e8294e9b8cf5f0cb171e097595355a4e&amp;amp;logo=0&amp;amp;expire=0&amp;amp;did=3b261266e884c0ed89a49f0cb582dc30&amp;amp;origin=all&amp;amp;vhost=play2http:\/\/hdl1a.douyucdn.cn\/live\/208114rCvmwAkEjM_2000phttp:\/\/hdl1a.douyucdn.cn\/live\/208114rCvmwAkEjMhttp://tx2play1.douyucdn.cn/live/208114rCvmwAkEjMhttp://tx2play1.douyucdn.cn/live/208114rCvmwAkEjM.m3u8最后这个就是直播源的地址，直接使用一款支持 URL 播放的视频播放器就可以，我这里用的是 QQ 播放器。
-在 QQ 播放器打开在线 URL ，然后将上面的 URL 地址打开，即可开始播放直播视频了。
-这种方法就只有视频，弹幕啥的都没有了。" />
+{&amp;#34;type&amp;#34;: &amp;#34;strjson&amp;#34;,&amp;#34;Rendata&amp;#34;: {&amp;#34;tname&amp;#34;: &amp;#34;Unbroadcast&amp;#34;,&amp;#34;time&amp;#34;: 1588657716},&amp;#34;info&amp;#34;: &amp;#34;Live broadcasting has been closed&amp;#34;,&amp;#34;state&amp;#34;: &amp;#34;NO&amp;#34;}如果房间正在直播，则会返回直播的地址
+{&amp;#34;type&amp;#34;: &amp;#34;strjson&amp;#34;,&amp;#34;Rendata&amp;#34;: {&amp;#34;media_type&amp;#34;: &amp;#34;live&amp;#34;,&amp;#34;data&amp;#34;: {&amp;#34;vid&amp;#34;: &amp;#34;208114&amp;#34;,&amp;#34;roomName&amp;#34;: &amp;#34;\u8bf7\u95ee\u8fd9\u91cc\u662f\u7089\u77f3\u533a\u58f0\u97f3\u6700\u5927\u7684\u76f4\u64ad\u95f4\u5417\uff1f&amp;#34;,&amp;#34;nickname&amp;#34;: &amp;#34;\u6069\u57fa\u7231\u840c\u840c\u54d2\u7684\u72d7\u8d3c&amp;#34;,&amp;#34;avatar&amp;#34;: &amp;#34;https:\/\/apic.douyucdn.cn\/upload\/avatar_v3\/201910\/54c8b6e4868041b1b1dc39776c110850_big.jpg?rltime&amp;#34;,&amp;#34;roomimg&amp;#34;: &amp;#34;https:\/\/rpic.douyucdn.cn\/asrpic\/200505\/208114_1317.png\/dy1&amp;#34;,&amp;#34;roominfo&amp;#34;: &amp;#34;\u4e0d\u7ba1\u4f60\u6765\u4e0d\u6765 \u6bcf\u5929\u6211\u90fd\u5728\u8fd9\u7b49\u4f60\u5440&amp;#34;},&amp;#34;link&amp;#34;: &amp;#34;http:\/\/hdl1a.douyucdn.cn\/live\/208114rCvmwAkEjM_2000p.flv?wsAuth=5804929fa6cee67e690d1c6ef9f15eb6&amp;amp;token=cpn-androidmpro-0-208114-35b27a1378d7a7e3e8294e9b8cf5f0cb171e097595355a4e&amp;amp;logo=0&amp;amp;expire=0&amp;amp;did=3b261266e884c0ed89a49f0cb582dc30&amp;amp;origin=all&amp;amp;vhost=play2&amp;#34;,&amp;#34;time&amp;#34;: 1588656009},&amp;#34;info&amp;#34;: &amp;#34;Check-OK&amp;#34;,&amp;#34;state&amp;#34;: &amp;#34;SUCCESS&amp;#34;}上面的 json 中，link 字段就是直播的地址，这里要做个变换。" />
 <meta name="keywords" content="douyu, qqplayer" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="/posts/douyu-with-qqplayer/" />
@@ -157,9 +154,34 @@ https://www.52pojie.cn/thread-1096152-1-1.html
 <p>第一步是一个关键网址</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">https://web.sinsyth.com/lxapi/douyujx.x?roomid=房间号
 </code></pre></div><p>如果房间当前没有直播，则会返回未开播的json</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{<span style="color:#f92672">&#34;type&#34;</span>:<span style="color:#e6db74">&#34;strjson&#34;</span>,<span style="color:#f92672">&#34;Rendata&#34;</span>:{<span style="color:#f92672">&#34;tname&#34;</span>:<span style="color:#e6db74">&#34;Unbroadcast&#34;</span>,<span style="color:#f92672">&#34;time&#34;</span>:<span style="color:#ae81ff">1588657716</span>},<span style="color:#f92672">&#34;info&#34;</span>:<span style="color:#e6db74">&#34;Live broadcasting has been closed&#34;</span>,<span style="color:#f92672">&#34;state&#34;</span>:<span style="color:#e6db74">&#34;NO&#34;</span>}
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;strjson&#34;</span>,
+    <span style="color:#f92672">&#34;Rendata&#34;</span>: {
+        <span style="color:#f92672">&#34;tname&#34;</span>: <span style="color:#e6db74">&#34;Unbroadcast&#34;</span>,
+        <span style="color:#f92672">&#34;time&#34;</span>: <span style="color:#ae81ff">1588657716</span>
+    },
+    <span style="color:#f92672">&#34;info&#34;</span>: <span style="color:#e6db74">&#34;Live broadcasting has been closed&#34;</span>,
+    <span style="color:#f92672">&#34;state&#34;</span>: <span style="color:#e6db74">&#34;NO&#34;</span>
+}
 </code></pre></div><p>如果房间正在直播，则会返回直播的地址</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{<span style="color:#f92672">&#34;type&#34;</span>:<span style="color:#e6db74">&#34;strjson&#34;</span>,<span style="color:#f92672">&#34;Rendata&#34;</span>:{<span style="color:#f92672">&#34;media_type&#34;</span>:<span style="color:#e6db74">&#34;live&#34;</span>,<span style="color:#f92672">&#34;data&#34;</span>:{<span style="color:#f92672">&#34;vid&#34;</span>:<span style="color:#e6db74">&#34;208114&#34;</span>,<span style="color:#f92672">&#34;roomName&#34;</span>:<span style="color:#e6db74">&#34;\u8bf7\u95ee\u8fd9\u91cc\u662f\u7089\u77f3\u533a\u58f0\u97f3\u6700\u5927\u7684\u76f4\u64ad\u95f4\u5417\uff1f&#34;</span>,<span style="color:#f92672">&#34;nickname&#34;</span>:<span style="color:#e6db74">&#34;\u6069\u57fa\u7231\u840c\u840c\u54d2\u7684\u72d7\u8d3c&#34;</span>,<span style="color:#f92672">&#34;avatar&#34;</span>:<span style="color:#e6db74">&#34;https:\/\/apic.douyucdn.cn\/upload\/avatar_v3\/201910\/54c8b6e4868041b1b1dc39776c110850_big.jpg?rltime&#34;</span>,<span style="color:#f92672">&#34;roomimg&#34;</span>:<span style="color:#e6db74">&#34;https:\/\/rpic.douyucdn.cn\/asrpic\/200505\/208114_1317.png\/dy1&#34;</span>,<span style="color:#f92672">&#34;roominfo&#34;</span>:<span style="color:#e6db74">&#34;\u4e0d\u7ba1\u4f60\u6765\u4e0d\u6765 \u6bcf\u5929\u6211\u90fd\u5728\u8fd9\u7b49\u4f60\u5440&#34;</span>},<span style="color:#f92672">&#34;link&#34;</span>:<span style="color:#e6db74">&#34;http:\/\/hdl1a.douyucdn.cn\/live\/208114rCvmwAkEjM_2000p.flv?wsAuth=5804929fa6cee67e690d1c6ef9f15eb6&amp;token=cpn-androidmpro-0-208114-35b27a1378d7a7e3e8294e9b8cf5f0cb171e097595355a4e&amp;logo=0&amp;expire=0&amp;did=3b261266e884c0ed89a49f0cb582dc30&amp;origin=all&amp;vhost=play2&#34;</span>,<span style="color:#f92672">&#34;time&#34;</span>:<span style="color:#ae81ff">1588656009</span>},<span style="color:#f92672">&#34;info&#34;</span>:<span style="color:#e6db74">&#34;Check-OK&#34;</span>,<span style="color:#f92672">&#34;state&#34;</span>:<span style="color:#e6db74">&#34;SUCCESS&#34;</span>}
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;strjson&#34;</span>,
+    <span style="color:#f92672">&#34;Rendata&#34;</span>: {
+        <span style="color:#f92672">&#34;media_type&#34;</span>: <span style="color:#e6db74">&#34;live&#34;</span>,
+        <span style="color:#f92672">&#34;data&#34;</span>: {
+            <span style="color:#f92672">&#34;vid&#34;</span>: <span style="color:#e6db74">&#34;208114&#34;</span>,
+            <span style="color:#f92672">&#34;roomName&#34;</span>: <span style="color:#e6db74">&#34;\u8bf7\u95ee\u8fd9\u91cc\u662f\u7089\u77f3\u533a\u58f0\u97f3\u6700\u5927\u7684\u76f4\u64ad\u95f4\u5417\uff1f&#34;</span>,
+            <span style="color:#f92672">&#34;nickname&#34;</span>: <span style="color:#e6db74">&#34;\u6069\u57fa\u7231\u840c\u840c\u54d2\u7684\u72d7\u8d3c&#34;</span>,
+            <span style="color:#f92672">&#34;avatar&#34;</span>: <span style="color:#e6db74">&#34;https:\/\/apic.douyucdn.cn\/upload\/avatar_v3\/201910\/54c8b6e4868041b1b1dc39776c110850_big.jpg?rltime&#34;</span>,
+            <span style="color:#f92672">&#34;roomimg&#34;</span>: <span style="color:#e6db74">&#34;https:\/\/rpic.douyucdn.cn\/asrpic\/200505\/208114_1317.png\/dy1&#34;</span>,
+            <span style="color:#f92672">&#34;roominfo&#34;</span>: <span style="color:#e6db74">&#34;\u4e0d\u7ba1\u4f60\u6765\u4e0d\u6765 \u6bcf\u5929\u6211\u90fd\u5728\u8fd9\u7b49\u4f60\u5440&#34;</span>
+        },
+        <span style="color:#f92672">&#34;link&#34;</span>: <span style="color:#e6db74">&#34;http:\/\/hdl1a.douyucdn.cn\/live\/208114rCvmwAkEjM_2000p.flv?wsAuth=5804929fa6cee67e690d1c6ef9f15eb6&amp;token=cpn-androidmpro-0-208114-35b27a1378d7a7e3e8294e9b8cf5f0cb171e097595355a4e&amp;logo=0&amp;expire=0&amp;did=3b261266e884c0ed89a49f0cb582dc30&amp;origin=all&amp;vhost=play2&#34;</span>,
+        <span style="color:#f92672">&#34;time&#34;</span>: <span style="color:#ae81ff">1588656009</span>
+    },
+    <span style="color:#f92672">&#34;info&#34;</span>: <span style="color:#e6db74">&#34;Check-OK&#34;</span>,
+    <span style="color:#f92672">&#34;state&#34;</span>: <span style="color:#e6db74">&#34;SUCCESS&#34;</span>
+}
 </code></pre></div><p>上面的 json 中，link 字段就是直播的地址，这里要做个变换。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">http:<span style="color:#ae81ff">\/\/</span>hdl1a.douyucdn.cn<span style="color:#ae81ff">\/</span>live<span style="color:#ae81ff">\/</span>208114rCvmwAkEjM_2000p.flv?wsAuth<span style="color:#f92672">=</span>5804929fa6cee67e690d1c6ef9f15eb6&amp;token<span style="color:#f92672">=</span>cpn-androidmpro-0-208114-35b27a1378d7a7e3e8294e9b8cf5f0cb171e097595355a4e&amp;logo<span style="color:#f92672">=</span>0&amp;expire<span style="color:#f92672">=</span>0&amp;did<span style="color:#f92672">=</span>3b261266e884c0ed89a49f0cb582dc30&amp;origin<span style="color:#f92672">=</span>all&amp;vhost<span style="color:#f92672">=</span>play2
 
@@ -173,6 +195,100 @@ http://tx2play1.douyucdn.cn/live/208114rCvmwAkEjM.m3u8
 </code></pre></div><p>最后这个就是直播源的地址，直接使用一款支持 URL 播放的视频播放器就可以，我这里用的是 QQ 播放器。</p>
 <p>在 QQ 播放器打开在线 URL ，然后将上面的 URL 地址打开，即可开始播放直播视频了。</p>
 <p>这种方法就只有视频，弹幕啥的都没有了。</p>
+<h2 id="开源">开源<a href="#开源" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>下面是用 golang 写的一个小工具，通过房间 ID 来获得斗鱼直播的 URL ，如果未直播就打印 closed。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;encoding/json&#34;</span>
+	<span style="color:#e6db74">&#34;flag&#34;</span>
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+	<span style="color:#e6db74">&#34;io/ioutil&#34;</span>
+	<span style="color:#e6db74">&#34;net/http&#34;</span>
+	<span style="color:#e6db74">&#34;strings&#34;</span>
+)
+
+<span style="color:#75715e">// Rendata is data in res
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Rendata</span> <span style="color:#66d9ef">struct</span> {
+	<span style="color:#a6e22e">Tname</span> <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`json:&#34;tname&#34;`</span>
+	<span style="color:#a6e22e">Time</span>  <span style="color:#66d9ef">int64</span>  <span style="color:#e6db74">`json:&#34;time&#34;`</span>
+	<span style="color:#a6e22e">Link</span>  <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`json:&#34;link&#34;`</span>
+}
+
+<span style="color:#75715e">// DYRes is Douyu result
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">DYRes</span> <span style="color:#66d9ef">struct</span> {
+	<span style="color:#a6e22e">Type</span>  <span style="color:#66d9ef">string</span>  <span style="color:#e6db74">`json:&#34;type&#34;`</span>
+	<span style="color:#a6e22e">Data</span>  <span style="color:#a6e22e">Rendata</span> <span style="color:#e6db74">`json:&#34;Rendata&#34;`</span>
+	<span style="color:#a6e22e">Info</span>  <span style="color:#66d9ef">string</span>  <span style="color:#e6db74">`json:&#34;info&#34;`</span>
+	<span style="color:#a6e22e">State</span> <span style="color:#66d9ef">string</span>  <span style="color:#e6db74">`json:&#34;state&#34;`</span>
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">getLiveURL</span>(<span style="color:#a6e22e">id</span> <span style="color:#66d9ef">string</span>) (<span style="color:#a6e22e">link</span> <span style="color:#66d9ef">string</span>) {
+	<span style="color:#a6e22e">durl</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;https://web.sinsyth.com/lxapi/douyujx.x?roomid=&#34;</span>
+
+	<span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#a6e22e">durl</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">id</span>)
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;get url failed:&#34;</span>, <span style="color:#a6e22e">err</span>)
+		<span style="color:#66d9ef">return</span>
+	}
+	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">Body</span>.<span style="color:#a6e22e">Close</span>()
+
+	<span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadAll</span>(<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">Body</span>)
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;read failed:&#34;</span>, <span style="color:#a6e22e">err</span>)
+		<span style="color:#66d9ef">return</span>
+	}
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dyres</span> <span style="color:#a6e22e">DYRes</span>
+	<span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">data</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">dyres</span>)
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;json failed:&#34;</span>, <span style="color:#a6e22e">err</span>)
+		<span style="color:#66d9ef">return</span>
+	}
+
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">dyres</span>.<span style="color:#a6e22e">State</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;SUCCESS&#34;</span> {
+		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">dyres</span>.<span style="color:#a6e22e">Data</span>.<span style="color:#a6e22e">Link</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;&#34;</span> {
+			<span style="color:#a6e22e">link</span> = <span style="color:#a6e22e">dyres</span>.<span style="color:#a6e22e">Data</span>.<span style="color:#a6e22e">Link</span>
+			<span style="color:#66d9ef">return</span>
+		}
+	} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">dyres</span>.<span style="color:#a6e22e">State</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;NO&#34;</span> {
+		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;closed&#34;</span>)
+	}
+
+	<span style="color:#66d9ef">return</span>
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">parseLiveURL</span>(<span style="color:#a6e22e">link</span> <span style="color:#66d9ef">string</span>) (<span style="color:#a6e22e">result</span> <span style="color:#66d9ef">string</span>) {
+	<span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">LastIndex</span>(<span style="color:#a6e22e">link</span>, <span style="color:#e6db74">&#34;_&#34;</span>)
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> {
+		<span style="color:#a6e22e">link</span> = <span style="color:#a6e22e">link</span>[:<span style="color:#a6e22e">e</span>]
+	}
+
+	<span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Index</span>(<span style="color:#a6e22e">link</span>, <span style="color:#e6db74">&#34;.&#34;</span>)
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> {
+		<span style="color:#a6e22e">link</span> = <span style="color:#a6e22e">link</span>[<span style="color:#a6e22e">s</span>:]
+	}
+
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">link</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;&#34;</span> {
+		<span style="color:#a6e22e">result</span> = <span style="color:#e6db74">&#34;http://tx2play1&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">link</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;.m3u8&#34;</span>
+	}
+
+	<span style="color:#66d9ef">return</span>
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">id</span> <span style="color:#66d9ef">string</span>
+
+	<span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">StringVar</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">id</span>, <span style="color:#e6db74">&#34;id&#34;</span>, <span style="color:#e6db74">&#34;9500,208114,93589,142488&#34;</span>, <span style="color:#e6db74">&#34;douyu id&#34;</span>)
+	<span style="color:#a6e22e">flag</span>.<span style="color:#a6e22e">Parse</span>()
+
+	<span style="color:#a6e22e">ids</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Split</span>(<span style="color:#a6e22e">id</span>, <span style="color:#e6db74">&#34;,&#34;</span>)
+	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">v</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">ids</span> {
+		<span style="color:#a6e22e">link</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">getLiveURL</span>(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">TrimSpace</span>(<span style="color:#a6e22e">v</span>))
+		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">parseLiveURL</span>(<span style="color:#a6e22e">link</span>))
+	}
+}
+</code></pre></div><h2 id="todo">TODO<a href="#todo" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>如果想写个自己的客户端，大致思路就是，找到斗鱼显示直播列表的 API ，用同样的方法，找到在线播放的 URL ，然后用网页播放器来进行播放。</p>
 
       </div></div>
   
