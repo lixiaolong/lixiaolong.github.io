@@ -7,7 +7,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="description" content="概述 无聊的时候就会看看斗鱼直播，主要看看游戏区，奈何网页和官方客户端上各种眼花缭乱的功能，看着就心烦意乱，Win10 上确实有个官方 UWP 的客户端又简洁又美观，然而官方却放弃了这个客户端，目前这个 UWP 版本播放时不时就闪退，实在抓狂，所以只得到网上找找有没有解决办法，于是在网上搜集到了一个比较符合我的口味的解决办法，在这里记录下来。
-# 参考链接https://www.52pojie.cn/thread-1096152-1-1.html步骤 第一步是一个关键网址
+# 参考链接https://www.52pojie.cn/thread-1096152-1-1.htmlhttps://www.52pojie.cn/thread-957638-1-1.html步骤 第一步是一个关键网址
 https://web.sinsyth.com/lxapi/douyujx.x?roomid=房间号如果房间当前没有直播，则会返回未开播的json
 {&amp;#34;type&amp;#34;: &amp;#34;strjson&amp;#34;,&amp;#34;Rendata&amp;#34;: {&amp;#34;tname&amp;#34;: &amp;#34;Unbroadcast&amp;#34;,&amp;#34;time&amp;#34;: 1588657716},&amp;#34;info&amp;#34;: &amp;#34;Live broadcasting has been closed&amp;#34;,&amp;#34;state&amp;#34;: &amp;#34;NO&amp;#34;}如果房间正在直播，则会返回直播的地址
 {&amp;#34;type&amp;#34;: &amp;#34;strjson&amp;#34;,&amp;#34;Rendata&amp;#34;: {&amp;#34;media_type&amp;#34;: &amp;#34;live&amp;#34;,&amp;#34;data&amp;#34;: {&amp;#34;vid&amp;#34;: &amp;#34;208114&amp;#34;,&amp;#34;roomName&amp;#34;: &amp;#34;\u8bf7\u95ee\u8fd9\u91cc\u662f\u7089\u77f3\u533a\u58f0\u97f3\u6700\u5927\u7684\u76f4\u64ad\u95f4\u5417\uff1f&amp;#34;,&amp;#34;nickname&amp;#34;: &amp;#34;\u6069\u57fa\u7231\u840c\u840c\u54d2\u7684\u72d7\u8d3c&amp;#34;,&amp;#34;avatar&amp;#34;: &amp;#34;https:\/\/apic.douyucdn.cn\/upload\/avatar_v3\/201910\/54c8b6e4868041b1b1dc39776c110850_big.jpg?rltime&amp;#34;,&amp;#34;roomimg&amp;#34;: &amp;#34;https:\/\/rpic.douyucdn.cn\/asrpic\/200505\/208114_1317.png\/dy1&amp;#34;,&amp;#34;roominfo&amp;#34;: &amp;#34;\u4e0d\u7ba1\u4f60\u6765\u4e0d\u6765 \u6bcf\u5929\u6211\u90fd\u5728\u8fd9\u7b49\u4f60\u5440&amp;#34;},&amp;#34;link&amp;#34;: &amp;#34;http:\/\/hdl1a.douyucdn.cn\/live\/208114rCvmwAkEjM_2000p.flv?wsAuth=5804929fa6cee67e690d1c6ef9f15eb6&amp;amp;token=cpn-androidmpro-0-208114-35b27a1378d7a7e3e8294e9b8cf5f0cb171e097595355a4e&amp;amp;logo=0&amp;amp;expire=0&amp;amp;did=3b261266e884c0ed89a49f0cb582dc30&amp;amp;origin=all&amp;amp;vhost=play2&amp;#34;,&amp;#34;time&amp;#34;: 1588656009},&amp;#34;info&amp;#34;: &amp;#34;Check-OK&amp;#34;,&amp;#34;state&amp;#34;: &amp;#34;SUCCESS&amp;#34;}上面的 json 中，link 字段就是直播的地址，这里要做个变换。" />
@@ -150,6 +150,8 @@ https://web.sinsyth.com/lxapi/douyujx.x?roomid=房间号如果房间当前没�
 <p>无聊的时候就会看看斗鱼直播，主要看看游戏区，奈何网页和官方客户端上各种眼花缭乱的功能，看着就心烦意乱，Win10 上确实有个官方 UWP 的客户端又简洁又美观，然而官方却放弃了这个客户端，目前这个 UWP 版本播放时不时就闪退，实在抓狂，所以只得到网上找找有没有解决办法，于是在网上搜集到了一个比较符合我的口味的解决办法，在这里记录下来。</p>
 <pre><code># 参考链接
 https://www.52pojie.cn/thread-1096152-1-1.html
+
+https://www.52pojie.cn/thread-957638-1-1.html
 </code></pre><h2 id="步骤">步骤<a href="#步骤" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>第一步是一个关键网址</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">https://web.sinsyth.com/lxapi/douyujx.x?roomid=房间号
@@ -261,6 +263,16 @@ http://tx2play1.douyucdn.cn/live/208114rCvmwAkEjM.m3u8
 	<span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">LastIndex</span>(<span style="color:#a6e22e">link</span>, <span style="color:#e6db74">&#34;_&#34;</span>)
 	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> {
 		<span style="color:#a6e22e">link</span> = <span style="color:#a6e22e">link</span>[:<span style="color:#a6e22e">e</span>]
+	} <span style="color:#66d9ef">else</span> {
+		<span style="color:#a6e22e">e</span> = <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Index</span>(<span style="color:#a6e22e">link</span>, <span style="color:#e6db74">&#34;?&#34;</span>)
+		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> {
+			<span style="color:#a6e22e">link</span> = <span style="color:#a6e22e">link</span>[:<span style="color:#a6e22e">e</span>]
+		}
+
+		<span style="color:#a6e22e">e</span> = <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">LastIndex</span>(<span style="color:#a6e22e">link</span>, <span style="color:#e6db74">&#34;.&#34;</span>)
+		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> {
+			<span style="color:#a6e22e">link</span> = <span style="color:#a6e22e">link</span>[:<span style="color:#a6e22e">e</span>]
+		}
 	}
 
 	<span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Index</span>(<span style="color:#a6e22e">link</span>, <span style="color:#e6db74">&#34;.&#34;</span>)
@@ -269,7 +281,7 @@ http://tx2play1.douyucdn.cn/live/208114rCvmwAkEjM.m3u8
 	}
 
 	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">link</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;&#34;</span> {
-		<span style="color:#a6e22e">result</span> = <span style="color:#e6db74">&#34;http://tx2play1&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">link</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;.m3u8&#34;</span>
+		<span style="color:#a6e22e">result</span> = <span style="color:#e6db74">&#34;http://tx2play1&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">link</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;.flv&#34;</span>
 	}
 
 	<span style="color:#66d9ef">return</span>
