@@ -66,6 +66,18 @@
   </url>
   
   <url>
+    <loc>/tags/golang/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/tools/</loc>
+  </url>
+  
+  <url>
+    <loc>/posts/get-location-by-ip/</loc>
+  </url>
+  
+  <url>
     <loc>/posts/douyu-with-qqplayer/</loc>
   </url>
   
