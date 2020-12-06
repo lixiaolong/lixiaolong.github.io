@@ -3,17 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/tags/gitbook/</loc>
-    <lastmod>2020-04-19T21:02:31+08:00</lastmod>
+    <loc>/posts/</loc>
+    <lastmod>2020-12-06T16:53:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/</loc>
-    <lastmod>2020-04-19T21:02:31+08:00</lastmod>
+    <loc>/</loc>
+    <lastmod>2020-12-06T16:53:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/</loc>
+    <lastmod>2020-12-06T16:53:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/%E5%BD%B1%E8%A7%86/</loc>
+    <lastmod>2020-12-06T16:53:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/live-gate/</loc>
+    <lastmod>2020-12-06T16:53:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/%E7%94%B5%E8%A7%86%E5%89%A7/</loc>
+    <lastmod>2020-12-06T16:53:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/gitbook/</loc>
     <lastmod>2020-04-19T21:02:31+08:00</lastmod>
   </url>
   
@@ -40,11 +60,6 @@
   <url>
     <loc>/posts/devtools/</loc>
     <lastmod>2020-04-19T21:02:31+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2020-04-19T19:17:27+08:00</lastmod>
   </url>
   
   <url>

@@ -8,11 +8,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="description" content="概述 有时候我们需要通过 IP 地址查询所对应的地理位置，虽然有很多在线的网站都提供查询，有些网站还可以批量查询，但是需要登录，而且查询的数量过多时就会卡住，以及有查询数量限制，所以这里记录一种查询的库，并且编写了一个查询工具。
 下面是这个 IP 地理位置库的链接。
-# 参考来源https://gitee.com/lionsoul/ip2region/# db下载https://gitee.com/lionsoul/ip2region/tree/master/data从其介绍上看，这个库是集合了一些公开的库，它其实是通过接口从那些在线的地址库中查询并聚合而成。
+# 参考来源 https://gitee.com/lionsoul/ip2region/ # db下载 https://gitee.com/lionsoul/ip2region/tree/master/data 从其介绍上看，这个库是集合了一些公开的库，它其实是通过接口从那些在线的地址库中查询并聚合而成。
 01, &amp;gt;80%, 淘宝IP地址库, http://ip.taobao.com/02, ≈10%, GeoIP, https://geoip.com/03, ≈2%, 纯真IP库, http://www.cz88.net/这个库提供了很多语言的查询库，可以很方便的在自己的程序中集成。我们这里使用 golang 的接口来编写程序。
 接口库的使用 这个库的 golang 接口地址
-github.com/lionsoul2014/ip2region/binding/golang/ip2region下面是例子代码。
-package mainimport (&amp;#34;fmt&amp;#34;&amp;#34;github.com/lionsoul2014/ip2region/binding/golang/ip2region&amp;#34;)func main() {fmt.Println(&amp;#34;err&amp;#34;)region, err := ip2region.New(&amp;#34;ip2region.db&amp;#34;)defer region.Close()if err != nil {fmt.Println(err)return}ip, err := region.MemorySearch(&amp;#34;127.0.0.1&amp;#34;)fmt.Println(ip, err)ip, err = region.BinarySearch(&amp;#34;127.0.0.1&amp;#34;)fmt." />
+github.com/lionsoul2014/ip2region/binding/golang/ip2region 下面是例子代码。
+package main import ( &amp;#34;fmt&amp;#34; &amp;#34;github.com/lionsoul2014/ip2region/binding/golang/ip2region&amp;#34; ) func main() { fmt.Println(&amp;#34;err&amp;#34;) region, err := ip2region.New(&amp;#34;ip2region.db&amp;#34;) defer region.Close() if err != nil { fmt.Println(err) return } ip, err := region.MemorySearch(&amp;#34;127.0.0.1&amp;#34;) fmt.Println(ip, err) ip, err = region.BinarySearch(&amp;#34;127.0.0.1&amp;#34;) fmt." />
 <meta name="keywords" content="ip, location, geo" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="/posts/get-location-by-ip/" />
@@ -207,11 +207,11 @@ iptools.exe -i all.json
 <span style="color:#f92672">[</span>
     <span style="color:#f92672">{</span>
         <span style="color:#e6db74">&#34;key&#34;</span>: <span style="color:#e6db74">&#34;8.8.8.8&#34;</span>,
-        <span style="color:#e6db74">&#34;doc_count&#34;</span>: 20
+        <span style="color:#e6db74">&#34;doc_count&#34;</span>: <span style="color:#ae81ff">20</span>
     <span style="color:#f92672">}</span>,
     <span style="color:#f92672">{</span>
         <span style="color:#e6db74">&#34;key&#34;</span>: <span style="color:#e6db74">&#34;1.1.1.1&#34;</span>,
-        <span style="color:#e6db74">&#34;doc_count&#34;</span>: 9
+        <span style="color:#e6db74">&#34;doc_count&#34;</span>: <span style="color:#ae81ff">9</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">]</span>
 

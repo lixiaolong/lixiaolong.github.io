@@ -188,15 +188,15 @@ docker-machine ssh devtool
 <p>1）下载<code>docker-compose</code>，将可执行文件放到<code>boot2docker</code>虚拟机中</p>
 <p><a href="https://github.com/docker/compose/releases">https://github.com/docker/compose/releases</a></p>
 <p>2）编写<code>docker-compose.yaml</code>配置文件</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">Version0</span>: <span style="color:#e6db74">&#34;3&#34;</span>
-<span style="color:#66d9ef">services</span>:
-    <span style="color:#66d9ef">devtool</span>:
-        <span style="color:#66d9ef">build</span>: .
-        <span style="color:#66d9ef">volumes</span>:
-            - /c/Users/li_xi/work/build/:/build
-        <span style="color:#66d9ef">working_dir</span>: /build
-        <span style="color:#66d9ef">stdin_open</span>: <span style="color:#66d9ef">true</span>
-        <span style="color:#66d9ef">tty</span>: <span style="color:#66d9ef">true</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">Version0</span>: <span style="color:#e6db74">&#34;3&#34;</span>
+<span style="color:#f92672">services</span>:
+    <span style="color:#f92672">devtool</span>:
+        <span style="color:#f92672">build</span>: <span style="color:#ae81ff">.</span>
+        <span style="color:#f92672">volumes</span>:
+            - <span style="color:#ae81ff">/c/Users/li_xi/work/build/:/build</span>
+        <span style="color:#f92672">working_dir</span>: <span style="color:#ae81ff">/build</span>
+        <span style="color:#f92672">stdin_open</span>: <span style="color:#66d9ef">true</span>
+        <span style="color:#f92672">tty</span>: <span style="color:#66d9ef">true</span>
 </code></pre></div><p>3）编写<code>Dockerfile</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dockerfile" data-lang="dockerfile"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> centos:7</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> yum -y install kde-l10n-Chinese <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
