@@ -5,7 +5,7 @@
     <title>开始 :: Raindrop</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Hugo hugo是一个静态博客工具，采用我比较喜欢的golang编写
 # 官网 https://gohugo.io # 源码 https://github.com/gohugoio/hugo # 下载 https://github.com/gohugoio/hugo/releases 可以从github的release下载，如果有搭建golang编译环境的话，也可以自行编译。
 # 开启go module go env -w GO111MODULE=on # 编译并安装 go get -ldflags &amp;#34;-w -s&amp;#34; github.com/gohugoio/hugo # 注意添加GOPATH/bin到环境变量中，就可以使用hugo命令了 使用方法
@@ -29,7 +29,7 @@ cd raindrop git init git add * git commit * -m&amp;#34;init raindrop&amp;#34; Th
 
 
 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon-192x192.png">
 
   <link rel="shortcut icon" href="/img/favicon/blue.png">
 
@@ -37,14 +37,16 @@ cd raindrop git init git add * git commit * -m&amp;#34;init raindrop&amp;#34; Th
 
 <meta name="twitter:card" content="summary" />
 
-  <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="" />
 
-<meta name="twitter:creator" content="" />
 
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="开始 :: Raindrop">
+<meta property="og:title" content="开始">
 <meta property="og:description" content="Hugo hugo是一个静态博客工具，采用我比较喜欢的golang编写
 # 官网 https://gohugo.io # 源码 https://github.com/gohugoio/hugo # 下载 https://github.com/gohugoio/hugo/releases 可以从github的release下载，如果有搭建golang编译环境的话，也可以自行编译。
 # 开启go module go env -w GO111MODULE=on # 编译并安装 go get -ldflags &amp;#34;-w -s&amp;#34; github.com/gohugoio/hugo # 注意添加GOPATH/bin到环境变量中，就可以使用hugo命令了 使用方法
@@ -53,7 +55,7 @@ cd raindrop git init git add * git commit * -m&amp;#34;init raindrop&amp;#34; Th
 cd raindrop git init git add * git commit * -m&amp;#34;init raindrop&amp;#34; Theme hugo要下载一个主题才能使用，官网上提供了大量主题可供选择，我这里选择的是一款名叫Terminal的主题，其设计是模仿终端命令行，界面简洁美观，是我喜欢的风格。
 # 主题列表 https://themes.gohugo.io/ # Terminal https://themes." />
 <meta property="og:url" content="/start/" />
-<meta property="og:site_name" content="开始" />
+<meta property="og:site_name" content="Raindrop" />
 
   
     <meta property="og:image" content="/img/favicon/blue.png">
@@ -77,10 +79,10 @@ cd raindrop git init git add * git commit * -m&amp;#34;init raindrop&amp;#34; Th
 
 
 </head>
-<body class="">
+<body class="blue">
 
 
-<div class="container center headings--one-size">
+<div class="container full headings--one-size">
 
   <header class="header">
   <div class="header__inner">
@@ -92,7 +94,9 @@ cd raindrop git init git add * git commit * -m&amp;#34;init raindrop&amp;#34; Th
 </a>
 
     </div>
-    <div class="menu-trigger">menu</div>
+    
+      <div class="menu-trigger">menu</div>
+    
   </div>
   
     <nav class="menu">
@@ -137,13 +141,15 @@ cd raindrop git init git add * git commit * -m&amp;#34;init raindrop&amp;#34; Th
   <h1 class="post-title">
     <a href="/start/">开始</a></h1>
   <div class="post-meta">
-      
-    <span class="post-date">
-      2020-04-19
-    </span>
+    
+      <span class="post-date">
+        2020-04-19 
+      </span>
     
     
   </div>
+
+  
 
   
 
@@ -277,25 +283,7 @@ git submodule add https://github.com/lixiaolong/lixiaolong.github.io.git public
 https://lixiaolong.github.io
 </code></pre></div>
       </div></div>
-  
-  <div class="pagination">
-    <div class="pagination__title">
-      <span
-        class="pagination__title-h">阅读其他</span>
-      <hr />
-    </div>
-    <div class="pagination__buttons">
-      
-      
-      <span class="button next">
-        <a href="/about/">
-          <span class="button__text">关于</span>
-          <span class="button__icon">→</span>
-        </a>
-      </span>
-      
-    </div>
-  </div>
+
   
 
   
@@ -318,6 +306,8 @@ https://lixiaolong.github.io
 
 <script src="/assets/main.js"></script>
 <script src="/assets/prism.js"></script>
+
+
 
 
 
